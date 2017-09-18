@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServicioMusica" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:24369/ServicioMusica.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:24369/ServicioMusica.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServicioMusica_ObtenerArtistas_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerArtistas" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMusica_ObtenerArtistas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerArtistasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMusica_BuscarArtista_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarArtista" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMusica_BuscarArtista_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarArtistaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMusica_AgregarArtista_InputMessage">
+    <wsdl:part name="parameters" element="tns:AgregarArtista" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMusica_AgregarArtista_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AgregarArtistaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMusica_ModificarArtista_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModificarArtista" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMusica_ModificarArtista_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModificarArtistaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMusica_EliminarArtista_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarArtista" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMusica_EliminarArtista_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarArtistaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMusica_ObtenerCanciones_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerCanciones" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMusica_ObtenerCanciones_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerCancionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMusica_BuscarCancion_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarCancion" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMusica_BuscarCancion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarCancionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMusica_AgregarCancion_InputMessage">
+    <wsdl:part name="parameters" element="tns:AgregarCancion" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMusica_AgregarCancion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AgregarCancionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMusica_ModificarCancion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModificarCancion" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMusica_ModificarCancion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModificarCancionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMusica_EliminarCancion_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarCancion" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMusica_EliminarCancion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarCancionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMusica_ObtenerConciertos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerConciertos" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMusica_ObtenerConciertos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerConciertosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMusica_BuscarConcierto_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarConcierto" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMusica_BuscarConcierto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarConciertoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMusica_AgregarConcierto_InputMessage">
+    <wsdl:part name="parameters" element="tns:AgregarConcierto" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMusica_AgregarConcierto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AgregarConciertoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMusica_ModificarConcierto_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModificarConcierto" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMusica_ModificarConcierto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModificarConciertoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMusica_EliminarConcierto_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarConcierto" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMusica_EliminarConcierto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarConciertoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMusica_ObtenerDetallesConcierto_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerDetallesConcierto" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMusica_ObtenerDetallesConcierto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerDetallesConciertoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMusica_AgregarDetalleConcierto_InputMessage">
+    <wsdl:part name="parameters" element="tns:AgregarDetalleConcierto" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMusica_AgregarDetalleConcierto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AgregarDetalleConciertoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMusica_ModificarDetalleConcierto_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModificarDetalleConcierto" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMusica_ModificarDetalleConcierto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModificarDetalleConciertoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMusica_EliminarDetalleConcierto_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarDetalleConcierto" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMusica_EliminarDetalleConcierto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarDetalleConciertoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServicioMusica">
+    <wsdl:operation name="ObtenerArtistas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioMusica/ObtenerArtistas" message="tns:IServicioMusica_ObtenerArtistas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioMusica/ObtenerArtistasResponse" message="tns:IServicioMusica_ObtenerArtistas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarArtista">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioMusica/BuscarArtista" message="tns:IServicioMusica_BuscarArtista_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioMusica/BuscarArtistaResponse" message="tns:IServicioMusica_BuscarArtista_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregarArtista">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioMusica/AgregarArtista" message="tns:IServicioMusica_AgregarArtista_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioMusica/AgregarArtistaResponse" message="tns:IServicioMusica_AgregarArtista_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarArtista">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioMusica/ModificarArtista" message="tns:IServicioMusica_ModificarArtista_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioMusica/ModificarArtistaResponse" message="tns:IServicioMusica_ModificarArtista_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarArtista">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioMusica/EliminarArtista" message="tns:IServicioMusica_EliminarArtista_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioMusica/EliminarArtistaResponse" message="tns:IServicioMusica_EliminarArtista_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCanciones">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioMusica/ObtenerCanciones" message="tns:IServicioMusica_ObtenerCanciones_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioMusica/ObtenerCancionesResponse" message="tns:IServicioMusica_ObtenerCanciones_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarCancion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioMusica/BuscarCancion" message="tns:IServicioMusica_BuscarCancion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioMusica/BuscarCancionResponse" message="tns:IServicioMusica_BuscarCancion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregarCancion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioMusica/AgregarCancion" message="tns:IServicioMusica_AgregarCancion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioMusica/AgregarCancionResponse" message="tns:IServicioMusica_AgregarCancion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarCancion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioMusica/ModificarCancion" message="tns:IServicioMusica_ModificarCancion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioMusica/ModificarCancionResponse" message="tns:IServicioMusica_ModificarCancion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarCancion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioMusica/EliminarCancion" message="tns:IServicioMusica_EliminarCancion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioMusica/EliminarCancionResponse" message="tns:IServicioMusica_EliminarCancion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerConciertos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioMusica/ObtenerConciertos" message="tns:IServicioMusica_ObtenerConciertos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioMusica/ObtenerConciertosResponse" message="tns:IServicioMusica_ObtenerConciertos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarConcierto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioMusica/BuscarConcierto" message="tns:IServicioMusica_BuscarConcierto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioMusica/BuscarConciertoResponse" message="tns:IServicioMusica_BuscarConcierto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregarConcierto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioMusica/AgregarConcierto" message="tns:IServicioMusica_AgregarConcierto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioMusica/AgregarConciertoResponse" message="tns:IServicioMusica_AgregarConcierto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarConcierto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioMusica/ModificarConcierto" message="tns:IServicioMusica_ModificarConcierto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioMusica/ModificarConciertoResponse" message="tns:IServicioMusica_ModificarConcierto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarConcierto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioMusica/EliminarConcierto" message="tns:IServicioMusica_EliminarConcierto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioMusica/EliminarConciertoResponse" message="tns:IServicioMusica_EliminarConcierto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDetallesConcierto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioMusica/ObtenerDetallesConcierto" message="tns:IServicioMusica_ObtenerDetallesConcierto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioMusica/ObtenerDetallesConciertoResponse" message="tns:IServicioMusica_ObtenerDetallesConcierto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregarDetalleConcierto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioMusica/AgregarDetalleConcierto" message="tns:IServicioMusica_AgregarDetalleConcierto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioMusica/AgregarDetalleConciertoResponse" message="tns:IServicioMusica_AgregarDetalleConcierto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarDetalleConcierto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioMusica/ModificarDetalleConcierto" message="tns:IServicioMusica_ModificarDetalleConcierto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioMusica/ModificarDetalleConciertoResponse" message="tns:IServicioMusica_ModificarDetalleConcierto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarDetalleConcierto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioMusica/EliminarDetalleConcierto" message="tns:IServicioMusica_EliminarDetalleConcierto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioMusica/EliminarDetalleConciertoResponse" message="tns:IServicioMusica_EliminarDetalleConcierto_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServicioMusica" type="tns:IServicioMusica">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ObtenerArtistas">
+      <soap:operation soapAction="http://tempuri.org/IServicioMusica/ObtenerArtistas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarArtista">
+      <soap:operation soapAction="http://tempuri.org/IServicioMusica/BuscarArtista" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregarArtista">
+      <soap:operation soapAction="http://tempuri.org/IServicioMusica/AgregarArtista" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarArtista">
+      <soap:operation soapAction="http://tempuri.org/IServicioMusica/ModificarArtista" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarArtista">
+      <soap:operation soapAction="http://tempuri.org/IServicioMusica/EliminarArtista" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCanciones">
+      <soap:operation soapAction="http://tempuri.org/IServicioMusica/ObtenerCanciones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarCancion">
+      <soap:operation soapAction="http://tempuri.org/IServicioMusica/BuscarCancion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregarCancion">
+      <soap:operation soapAction="http://tempuri.org/IServicioMusica/AgregarCancion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarCancion">
+      <soap:operation soapAction="http://tempuri.org/IServicioMusica/ModificarCancion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarCancion">
+      <soap:operation soapAction="http://tempuri.org/IServicioMusica/EliminarCancion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerConciertos">
+      <soap:operation soapAction="http://tempuri.org/IServicioMusica/ObtenerConciertos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarConcierto">
+      <soap:operation soapAction="http://tempuri.org/IServicioMusica/BuscarConcierto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregarConcierto">
+      <soap:operation soapAction="http://tempuri.org/IServicioMusica/AgregarConcierto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarConcierto">
+      <soap:operation soapAction="http://tempuri.org/IServicioMusica/ModificarConcierto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarConcierto">
+      <soap:operation soapAction="http://tempuri.org/IServicioMusica/EliminarConcierto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDetallesConcierto">
+      <soap:operation soapAction="http://tempuri.org/IServicioMusica/ObtenerDetallesConcierto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregarDetalleConcierto">
+      <soap:operation soapAction="http://tempuri.org/IServicioMusica/AgregarDetalleConcierto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarDetalleConcierto">
+      <soap:operation soapAction="http://tempuri.org/IServicioMusica/ModificarDetalleConcierto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarDetalleConcierto">
+      <soap:operation soapAction="http://tempuri.org/IServicioMusica/EliminarDetalleConcierto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServicioMusica">
+    <wsdl:port name="BasicHttpBinding_IServicioMusica" binding="tns:BasicHttpBinding_IServicioMusica">
+      <soap:address location="http://localhost:24369/ServicioMusica.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
